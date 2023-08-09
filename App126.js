@@ -1,35 +1,14 @@
 
 import React, { useState } from 'react';
-import { Text, View, StyleSheet, TouchableOpacity, TextInput, FlatList } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons'
-import Tarefa from './src/Tarefa';
 
-export default function App() {
+export default function App126() {
   const [tarefa, setTarefa] = useState('')
-  const [list, setList] = useState([]);
   
   function handleAdd(){
-    if(tarefa === ''){
-      return;
-    }
-
-    const dados = {
-      key: Date.now(),
-      item: tarefa
-    }
-
-    setList(oldArray => [dados, ...oldArray]);
-    setTarefa('')
-
-  }
-  function handleDelete(){
-    // console.log(item);
-
-    let filtroItem = list.filter((tarefa) => {
-      return(tarefa.item !== item)
-    })
-
-    setList(filtroItem)
+    alert('teste')
+    alert(tarefa)
   }
 
   return (
@@ -48,13 +27,6 @@ export default function App() {
           <FontAwesome name='plus' size={20} color='#fff' />
         </TouchableOpacity>
       </View>
-
-      <FlatList
-        data={list}
-        keyExtractor={ (item) => item.key }
-        renderItem={ ({ item }) => <Tarefa data={item} deleteItem={ () => handleDelete(item.item)} /> }
-        style={style.list}
-      />
     </View>
   );
 }
@@ -96,12 +68,5 @@ const style = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 4,
-  },
-  list:{
-    flex: 1,
-    backgroundColor: '#fff',
-    paddingStart: '4%',
-    paddingEnd: '4%',
-    paddingEnd: 12,
   }
 })
