@@ -45,7 +45,7 @@ export default function App() {
           onChangeText={ (text) => setTarefa(text) }
         />
         <TouchableOpacity style={style.buttonAdd} onPress={handleAdd}>
-          <FontAwesome name='plus' size={20} color='#fff' />
+          <FontAwesome name='plus' size={25} color='#fff' />
         </TouchableOpacity>
       </View>
 
@@ -75,7 +75,7 @@ const style = StyleSheet.create({
   },
   containerInput:{
     flexDirection: 'row',
-    width: '100%',
+    width: '95%',
     height: 44,
     alignItems: 'center',
     justifyContent: 'center',

@@ -24,7 +24,7 @@ export default function App126() {
           onChangeText={ (text) => setTarefa(text) }
         />
         <TouchableOpacity style={style.buttonAdd} onPress={handleAdd}>
-          <FontAwesome name='plus' size={20} color='#fff' />
+          <FontAwesome name='plus' size={25} color='#fff' />
         </TouchableOpacity>
       </View>
     </View>
